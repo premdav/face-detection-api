@@ -2,6 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
+const knex = require('knex');
+const dbLogin = require('./dbLogin');
+
+const postgres = knex({
+    client: 'pg',
+    connection: dbLogin
+  });
+
+  console.log(postgres.select('*').from('users'));
 
 const app = express();
 
