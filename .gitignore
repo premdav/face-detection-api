@@ -5,3 +5,5 @@
 
 # sensitive info
 dbLogin.js
+# API Key
+config.js
